@@ -57,8 +57,8 @@ public class CssXpathExamples {
         // </div>
         $("input.inputtext .login_form_input_box");
 
-        // <div>Hello qa.guru</div>
-        $(byText("Hello qa.guru"));
-        $(withText("lo qa.guru"));
+        // <div>Hello test.some</div>
+        $(byText("Hello test.some"));
+        $(withText("lo test.some"));
     }
 }
