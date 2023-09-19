@@ -26,8 +26,23 @@ public class logTest extends TestBase {
 
     @Test
     @Tag("web")
+    @Tag("smoke")
     @DisplayName("Successful authorization to some google (UI)")
     void loginTest() {
+        step("Fill search query", () -> {
+            open("/");
+            $x("/html/body/div[1]/div[2]/div/img").isImage();
+            $x("/html/body/div[1]/div[2]/div/img").isDisplayed();
+
+        });
+    }
+
+    @Test
+    @Tag("web")
+    @Tag("smoke")
+    @Disabled
+    @DisplayName("Successful authorization to some google (UI)")
+    void loginDisabledTest() {
         step("Fill search query", () -> {
             open("/");
             $x("/html/body/div[1]/div[2]/div/img").isImage();

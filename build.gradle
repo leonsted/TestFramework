@@ -77,3 +77,9 @@ task api(type: Test) {
         includeTags 'api'
     }
 }
+
+task smoke(type: Test) {
+    useJUnitPlatform {
+        includeTags 'smoke'
+    }
+}

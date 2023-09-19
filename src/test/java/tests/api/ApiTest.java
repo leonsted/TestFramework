@@ -19,6 +19,7 @@ public class ApiTest {
 
     @Test
     @Tag("api")
+    @Tag("smoke")
     void apiTest() {
         step("Get cookie by api and set it to browser", () -> {
             String authorizationCookie =
