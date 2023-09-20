@@ -34,4 +34,22 @@ public class ApiTest {
                             .cookie("NOPCOMMERCE.AUTH");
         });
     }
+
+    @Test
+    @Tag("api")
+    @Tag("smoke")
+    void apiErrorTest() {
+        step("Get cookie by api and set it to browser", () -> {
+            String authorizationCookie =
+                    given()
+                            .filter(AllureRestAssuredFilter.withCustomTemplates())
+                            .contentType("application/x-www-form-urlencoded; charset=UTF-8")
+                            .when()
+                            .get("/pet/0")
+                            .then()
+                            .statusCode(200)
+                            .extract()
+                            .cookie("NOPCOMMERCE.AUTH");
+        });
+    }
 }
